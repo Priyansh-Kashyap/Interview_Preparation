@@ -1,1 +1,9 @@
-
+what is state file and where we can store it
+⁠what are the thing required while creating service connection.
+ ⁠what is basic in ADO
+⁠what is stake holder in ADO
+ 2.⁠ ⁠how you will managed multiple subscription
+ 3.⁠ ⁠what is difference between vm and vmss
+4  there is requirement to create two vm and two databased which approach you will follow vm or vmss
+ 5.⁠ ⁠let suppose you have 1500 subscription then how will you managed it from ADO level
+ 6.⁠ ⁠let suppose are architect and you want to setup infra then what will your approach like you have to provide solution to customer

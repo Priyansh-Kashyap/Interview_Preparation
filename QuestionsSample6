@@ -13,7 +13,6 @@
 15.⁠ ⁠I have a virtual machine template,I have also power shell script which joins the vm to domain after has been built, which provisioner should I used to ensure when I am running template vm is built and joins to domain.
 17.⁠ ⁠you are work in on team and one of your team member by mistake expose the password in Terraform template and checked it in repository, you changed the password from target resource ,how ever, how will you ensure that password is removed from repo.
 18.⁠ ⁠Terraform workspace and why we used it.
-[12/7, 4:39 PM] +91 84392 50746: Second round question hcl 
 Q1. I want to manage a set of PVs say in ns "lab" using a SA "testsa".
 Q2. Cluster roll binding ?
 Q3. can you write is Yaml File and explain?

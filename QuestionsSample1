@@ -1,42 +1,47 @@
-DevOps & Terraform Interview Questions
+1. Introduce Yourself
  2. Statefile management
- Terraform state file (terraform.tfstate) stores the mapping between real infrastructure and
+Ans. Terraform state file (terraform.tfstate) stores the mapping between real infrastructure and
  configuration. Proper management involves storing it in remote backends like Azure Storage or S3
  to support collaboration, enable locking, and prevent data loss.
  3. Move block
- The moved block is used in Terraform to tell Terraform that a resource has been moved or renamed.
+Ans. The moved block is used in Terraform to tell Terraform that a resource has been moved or renamed.
  It avoids re-creating resources and ensures smooth renaming or refactoring without resource
  destruction.
- 4. Difference between variable.tf, variables.tf, and tfvars files- variable.tf / variables.tf: Define input variables with default values and types.- *.tfvars: Used to assign values to variables. You can have multiple tfvars files for different
+ 4. Difference between variable.tf, variables.tf, and tfvars files-
+Ans. variable.tf / variables.tf: Define input variables with default values and types.- *.tfvars: Used to assign values to variables. You can have multiple tfvars files for different
  environments.
- 5. Implicit and explicit dependency- Implicit: Terraform figures out dependency based on references.- Explicit: Use depends_on to declare manual dependency when it's not obvious.
+ 5. Implicit and explicit dependency-
+Ans. Implicit: Terraform figures out dependency based on references.- Explicit: Use depends_on to declare manual dependency when it's not obvious.
  6. Locking mechanism
- State locking prevents simultaneous operations on the state file. Remote backends like Azure
+Ans. State locking prevents simultaneous operations on the state file. Remote backends like Azure
  Storage or S3 with DynamoDB locking ensure only one person can make changes at a time,
  avoiding state corruption.
  7. Pattern module
- Pattern modules are reusable Terraform modules that implement best practices. They improve
+Ans. Pattern modules are reusable Terraform modules that implement best practices. They improve
  consistency, reduce duplication, and follow the DRY principle.
  8. Type Constraints in Terraform
-Define variable types like string, number, bool, list, map, etc., for strict input control. It prevents
+Ans. Define variable types like string, number, bool, list, map, etc., for strict input control. It prevents
  unexpected values and ensures predictable behavior.
  9. When will the state file be created?
- The state file is created after the first successful terraform apply. It captures the current state of
+Ans The state file is created after the first successful terraform apply. It captures the current state of
  resources after deployment.
  10. What is linting? - TFLint
- Linting checks code for errors and best practices. TFLint analyzes Terraform code to catch issues
+Ans. Linting checks code for errors and best practices. TFLint analyzes Terraform code to catch issues
  early like unused variables, deprecated syntax, or wrong resource types.
- 11. Git push and git commit- git commit: Saves changes to local repo with a message.- git push: Uploads committed changes to the remote repository like GitHub.
+ 11. Git push and git commit- 
+Ans. git commit: Saves changes to local repo with a message.- git push: Uploads committed changes to the remote repository like GitHub.
  12. Process for PR (Pull Request)
- 1. Create a feature branch
+Ans. 1. Create a feature branch
  2. Push your code
  3. Open a PR
  4. Add reviewers
  5. Review and approve
  6. Merge PR
  7. CI/CD pipeline gets triggered.
- 13. Deployment group and task group- Deployment group: A set of target machines for agent-based deployments.- Task group: Reusable collection of pipeline tasks bundled together.
+ 13. Deployment group and task group- 
+Ans. Deployment group: A set of target machines for agent-based deployments.- Task group: Reusable collection of pipeline tasks bundled together.
  14. Service connection
- A secure way to connect Azure DevOps to external systems like Azure, GitHub, DockerHub, etc. It
+ Ans. A secure way to connect Azure DevOps to external systems like Azure, GitHub, DockerHub, etc. It
  stores credentials safely and enables authentication for pipeline actions.
-15. Security best practices for pipeline- Use service connections with least privilege- Store secrets in secure libraries- Enable approvals- Use private agents for sensitive builds- Scan code and containers- Implement RBAC and auditing
+15. Security best practices for pipeline- 
+Ans. Use service connections with least privilege- Store secrets in secure libraries- Enable approvals- Use private agents for sensitive builds- Scan code and containers- Implement RBAC and auditing

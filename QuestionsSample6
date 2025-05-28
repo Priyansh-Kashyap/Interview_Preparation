@@ -1,1 +1,29 @@
+1 what is data block In Terraform
+2.if you are creating data block it will be part of state file ?
+ 3.⁠ ⁠What are data type in Terraform 
+ 4.⁠ ⁠I need to create 10 storage account what type of data type should you used.
+ 5.⁠ ⁠Diff b/w for each and count.
+ 6.⁠ ⁠is count only work on integers ?, why deleting in count is difficult
+ 7.⁠ ⁠What is life cycle block give 2-3 argument,can it work on storage account scenario?
+8 What is diff b/w root and child module
+ 9.⁠ ⁠Resource and pattern module
+11.⁠ ⁠what are logging level supported by Terraform
+12.⁠ ⁠Terraform show
+13.⁠ ⁠Terraform fmt
+15.⁠ ⁠I have a virtual machine template,I have also power shell script which joins the vm to domain after has been built, which provisioner should I used to ensure when I am running template vm is built and joins to domain.
+17.⁠ ⁠you are work in on team and one of your team member by mistake expose the password in Terraform template and checked it in repository, you changed the password from target resource ,how ever, how will you ensure that password is removed from repo.
+18.⁠ ⁠Terraform workspace and why we used it.
+[12/7, 4:39 PM] +91 84392 50746: Second round question hcl 
+Q1. I want to manage a set of PVs say in ns "lab" using a SA "testsa".
+Q2. Cluster roll binding ?
+Q3. can you write is Yaml File and explain?
+Q4.terraform function ?
+Q5.how to maintain Kubernetes cluster ?
+Q6.what is the deployment gate in ADO?
+Q7.what is pool ?
+Q8. What is peering ?
+Q.9 difference between provider and provisioners ?
+Q10.how to upgrade kubernets cluster?
+
+
 

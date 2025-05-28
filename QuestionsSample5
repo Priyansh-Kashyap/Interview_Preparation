@@ -1,1 +1,15 @@
-
+new questions - terraform slug
+github - workflow and dispatch
+5-	Diff between count and for each
+6-	Diff between list and map
+7-	Power shell/ bash scripting idea - 
+8-	Git Hub Action Idea - working or not, basic question like event and syntax 
+9-	Micro services basics 
+10-	What is life cycle block
+11-  	if 2 team have same repo Access on ADO and how do you set for Auto PR raise when ever any 	changes done in the code.
+12-	How you can prevent a user in ADO from azure board , user can only access pipeline and repo 
+13 - 	Diff between Git fetch and git Pull
+14- 	How federation works in ADO (Ans- Service connection details)
+15-	Diff between pattern module and standard root child module 
+16- 	How we can stop all outgoing traffic from azure VM without NSG (Ans - by firewall and route table)
+17- 	Availability set and availability zone

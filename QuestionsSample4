@@ -1,1 +1,12 @@
-
+ 1.⁠ ⁠Give me a example of recently you may upgraded templates in terraform
+ 2.⁠ ⁠what are the data types are you familiar in terraform
+ 4.⁠ ⁠what is stage terraform download module and providers
+ 5.⁠ ⁠what are backends you familiar with
+ 6.⁠ ⁠how do you encrypt the state file
+ 7.⁠ ⁠you are creating variable in terraform and you need to provide it's default value. what argument will you declare provide the default value
+ 8.⁠ ⁠I have a vm that created through terraform and install the Microsoft office after create vm. and now i run command terraform apply again. what will happen. Microsoft office will remove or will be there
+ 9.⁠ ⁠what are lifecycle rules in terraform. which are declared within resource block in terraform
+10.⁠ ⁠what is dependances in terraform
+11.⁠ ⁠what are the gates in azure devops
+12.⁠ ⁠is macOS supported as agent pool 
+13.⁠ ⁠in azure what is availability set

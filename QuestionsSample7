@@ -1,1 +1,11 @@
+What is task group 
+What is deployment group
+What is ADO 
+What is sprint and work item 
+How you can secure ado 
+What is output block and how you will pass this into pipeline 
+If I have a terraform code till vm or I applied terraform plan and apply but I what vm result in json format , what will be the command for it , tell me the command only which tools used for pipeline 
+if ypu mark a varibale as sensative in terraform , if while doing tef state so how you will see this variable ....?
+2nd if you passes the value hardcoded in vm so it will show in plan or not 
+what is move block? is it will impact our current infra structure or not ?
 

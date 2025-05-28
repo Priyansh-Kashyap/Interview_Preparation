@@ -1,1 +1,71 @@
+1.⁠ ⁠What is linter and linting?
+ 2.⁠ ⁠what is provisioner
+ 3.⁠ ⁠what is dependances in terraform
+ 4.⁠ ⁠what is modules
+5.⁠ ⁠how can we save sensitive data in state file
+
+6.⁠ ⁠What is the move block in Terraform? Can you provide an example?
+7.⁠ ⁠When integrating Snowflake with Azure DevOps to trigger a pipeline, which authentication method should you use?
+8.⁠ ⁠What methodology do you follow in Azure Boards? What is a sprint, and how does it differ from a work item?
+9.⁠ ⁠Have you worked with task groups in Azure DevOps?
+10.⁠ ⁠If you have a multi-stage pipeline in Azure DevOps and, upon execution, only one pipeline runs even though there are no dependencies between stages, how would you troubleshoot the issue?
+11.⁠ ⁠If you’ve written a Terraform configuration to deploy a virtual machine using a custom image, and you later update the software in that image, what will happen if you run terraform apply again?
+12. How to create 10 storage account in 10 subscription with single pipeline
+
+Answers : ##############################################3
+
+1. What is linter and linting?
+Linting is the process of automatically analyzing code to identify errors, bugs, and stylistic issues before execution. A linter is the tool that performs this analysis. In Terraform, TFLint is widely used to enforce best practices and improve code quality by identifying unused declarations, deprecated syntax, or potential issues.
+
+2. What is a provisioner in Terraform?
+Provisioners in Terraform allow you to execute scripts or commands on a local or remote machine as part of resource creation or destruction. Common types include local-exec and remote-exec. While useful for bootstrapping, they should be avoided in production environments where possible, as they can introduce configuration drift.
+
+3. What are dependencies in Terraform?
+Terraform builds a dependency graph to determine the correct order in which resources should be created or destroyed. This is done automatically based on references between resources. You can also define explicit dependencies using the depends_on argument to ensure correct execution order when Terraform cannot infer it.
+
+4. What are modules in Terraform?
+Modules are containers for multiple Terraform resources that can be reused across projects. They allow for abstraction, code reuse, and better organization of complex infrastructure. Modules can be local, shared across teams, or pulled from the Terraform Registry.
+
+5. How can we save sensitive data in the state file?
+By default, Terraform saves all variable values, including sensitive ones, in the state file. You can mark variables as sensitive = true, which will prevent them from being shown in logs or output. To further protect this data, use remote backends (e.g., Azure Blob Storage) with encryption and access control.
+
+6. What is the move block in Terraform? Can you provide an example?
+The moved block is used to rename or refactor resources without destroying and recreating them. It tells Terraform to treat an existing resource as a new one.
+
+Example:
+
+hcl
+Copy
+Edit
+moved {
+  from = aws_instance.old_name
+  to   = aws_instance.new_name
+}
+7. When integrating Snowflake with Azure DevOps to trigger a pipeline, which authentication method should you use?
+The recommended authentication method is to use a Service Principal with OAuth2 via Azure Active Directory. This provides secure, automated access and can be integrated with Azure DevOps service connections.
+
+8. What methodology do you follow in Azure Boards? What is a sprint, and how does it differ from a work item?
+Typically, Agile or Scrum methodologies are followed. A sprint is a time-boxed development cycle (e.g., 2 weeks) where a team works on a set of predefined tasks. A work item is an individual unit of work such as a user story, bug, or task that resides within a sprint or backlog.
+
+9. Have you worked with task groups in Azure DevOps?
+Yes, task groups are reusable collections of tasks in a pipeline. They help modularize and standardize common build or deployment processes across multiple pipelines, improving maintainability and reducing duplication.
+
+10. If you have a multi-stage pipeline in Azure DevOps and only one stage runs, how would you troubleshoot the issue?
+I would check:
+
+The dependsOn directive to ensure no hidden dependencies.
+
+Stage conditions or expressions that might be preventing execution.
+
+Trigger conditions (manual, CI/CD).
+
+Variable scopes or runtime parameters.
+
+YAML indentation or syntax errors.
+
+11. If you deploy a VM using a custom image in Terraform and later update the image, what happens on terraform apply?
+Terraform does not detect changes inside the image automatically. You must explicitly recreate the VM using terraform taint or version your image (e.g., include a new image ID or version tag) to force an update during the next apply.
+
+12. How to create 10 storage accounts in 10 subscriptions with a single pipeline?
+You can define provider aliases for each subscription and loop through them using for_each. In Azure DevOps, create a loop in the pipeline (e.g., matrix strategy) that authenticates each subscription context individually and runs Terraform with appropriate ARM_SUBSCRIPTION_ID and provider alias.
 

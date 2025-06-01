@@ -10,15 +10,15 @@ Ques2: What is Provider?
 Ans: Provider is a plugin that enables Terraform to interact virtually with the cloud or other services through an accessible APIs
 
 Ques3: Write a code of provider file!
-Ans:   terraform{
-        required_providers{
-        azurerm = {
+Ans:   terraform{                 //This is the block where we define our global setting for terraform
+        required_providers{           // This block tells the terraform which cloud provider it should use
+        azurerm = {                   // It is just a name assigned to the provider
         source = "hashicorp/azurerm"
         version = "4.29.0"
   }
  }
 }
-provider "azurerm"{
+provider "azurerm"{                   // This block tells the terraform that we want to interact with the cloud platform
      features{}
      subscription_id = "azure_id"
 }
@@ -42,3 +42,8 @@ Ques8: Why we get an error "Inconsistent dependency lock file"?
 Ans: We get this error when terraform found that configuartion provider version does not match with locked version in .terraform.lock.hcl
 to solve this error run command
 "terraform init -upgrade"
+
+Ques9: What does "terraform plan" mean?
+Ans: This command defines what resources will create, update or delete based on the existing configuration file
+
+Ques10: What does "terraform apply" mean?

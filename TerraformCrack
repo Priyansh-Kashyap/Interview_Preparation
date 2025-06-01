@@ -1,1 +1,3 @@
-
+What is Terraform? Why we use it?
+Ans- Terraform is an IAC tool which is infrastructure as Code which is used to creating and managing resources on cloud through an accessible APIs.
+Why we are using it:- 

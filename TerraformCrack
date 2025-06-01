@@ -1,3 +1,7 @@
 What is Terraform? Why we use it?
 Ans- Terraform is an IAC tool which is infrastructure as Code which is used to creating and managing resources on cloud through an accessible APIs.
 Why we are using it:- 
+a) Multi Cloud Provisioning (can use on AWS, GCP, Azure)
+b) State management: means you can track infrastructure and detect any changes
+c) Automation in CI/CD pipeline: means we can automate our infrastructure through AzureDevops pipeline
+d) Reusable Modules: means we can implement parent child module strategy to  create our resources and reuse it whenever needed

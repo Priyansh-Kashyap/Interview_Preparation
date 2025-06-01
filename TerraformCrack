@@ -22,3 +22,23 @@ provider "azurerm"{
      features{}
      subscription_id = "azure_id"
 }
+
+Ques4: What does "terraform init" command mean?
+Ans: This command scans the .tf file in the configuration and the intializes the backend and provider plugins
+      further it creates
+a) .terraform folder:
+b) .terraform.lock.hcl
+
+Ques5: Can we run terraform init without .tf files?
+Ans: No, we can't intialize terraform without .tf file if we do so then we get an error "Terraform initialize in an empty directory!"
+
+Ques6: What happens when we run terraform init without provider but we have resource.tf?
+Ans: Terraform will scan the resource.tf file and then intialize the backend and provider plugins and pulls latest version of provider from hashicorp
+
+Ques7: What happens when we run "terraform plan" without provider?
+Ans: Terraform will throws an error "Invalid provider configuration"
+
+Ques8: Why we get an error "Inconsistent dependency lock file"?
+Ans: We get this error when terraform found that configuartion provider version does not match with locked version in .terraform.lock.hcl
+to solve this error run command
+"terraform init -upgrade"
